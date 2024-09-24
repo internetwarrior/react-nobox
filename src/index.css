@@ -6,9 +6,362 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.container {
+main {
+  margin-top: 56px;
+  margin-bottom: 154px;
+}
 
-  max-width: 1200px;
-  margin: 0 auto;
+.card-x {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0px !important;
+  border-radius: 10px !important;
+  position: relative !important;
+  padding: 0px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  width: auto;
+}
+
+.card-n {
   width: 100%;
+  max-width: 600px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-i {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.card-i img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card-d img {
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+.card-n div {
+  flex-basis: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+@media (min-width: 1025px) {
+  .listing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+* {
+  outline: 1px solid limegreen;
+}
+
+/* Стиль для всех браузеров */
+::-webkit-scrollbar {
+  width: 10px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет бегунка */
+  border-radius: 5px; /* Скругленные углы */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет бегунка при наведении */
+}
+
+/* Стиль для Firefox */
+* {
+  scrollbar-width: thin; /* Тонкий скроллбар */
+  scrollbar-color: #888 #f1f1f1; /* Цвет бегунка и дорожки */
+}
+
+.realTime-filter {
+  margin-left: 20px;
+}
+.filter-options {
+  all: unset;
+  outline: 0.5px solid gray;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: light;
+  border-radius: 8px;
+  color: gray;
+}
+.btn-box {
+  border-bottom: 1px solid gray;
+  height: 50px;
+}
+
+.btn-right {
+  float: right;
+  margin: 20px;
+  display: flex;
+  column-gap: 20px;
+}
+
+.btn-reset {
+  all: unset;
+  outline: 0.5px solid gray;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: light;
+  border-radius: 8px;
+  color: gray;
+}
+
+.btn-find {
+  all: unset;
+  background: #ffd646;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.carts {
+  background-color: #f2f2f2;
+  /* margin-top: 80px; */
+}
+
+.slide {
+  width: 400px;
+  height: 450px;
+  overflow-x: auto;
+  display: flex;
+  cursor: pointer;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.cart__box {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+
+  /* flex-wrap: wrap; */
+}
+
+.hello div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-prev {
+  all: unset;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd646;
+  display: inline-block; /* Чтобы кнопка сохраняла свои размеры */
+  cursor: pointer;
+}
+
+.img-cart {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.cart-description {
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.cart-description p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  line-height: 2.7;
+}
+
+.time-publication img {
+  border-radius: 50%;
+}
+
+.time-publication {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-publication__text {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+header {
+  height: 56px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.logo {
+  max-height: 56px;
+  margin: auto;
+  padding: 10px 10px 10px 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: 0px;
+  font-size: 36px;
+  padding: 0;
+  font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #6699cc;
+}
+
+.card {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* Сдвигаем левую часть элемента к середине экрана */
+  transform: translate(
+    -50%,
+    0%
+  ); /* Сдвигаем элемент по X на половину его ширины, чтобы центрировать его, и по Y на его высоту */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 32px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.features {
+  width: 100%;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.features ul li img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.features ul li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.features ul li p:first-child {
+  font-weight: 600;
+}
+
+.features ul li p:last-child {
+  font-size: 14px;
+  color: #666;
+}
+
+.actions {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.actions button {
+  padding: 15px 45px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.actions button:hover {
+  background-color: var(--primary-color);
 }
