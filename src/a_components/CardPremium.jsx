@@ -1,7 +1,9 @@
-import React from "react";
-import features from "../data/data.js"
+import React, { useContext } from "react";
+import features from "../data/data.js";
+import ValueContext from "../context/global.js";
 
 const FeatureCard = () => {
+  const { value, setValue } = useContext(ValueContext);
   return (
     <div className="card">
       <div className="header">
@@ -13,7 +15,9 @@ const FeatureCard = () => {
             <li key={title}>
               {/* <img alt="icon" src="" /> */}
               <div>
-                <p>{emoji} {title}</p>
+                <p>
+                  {emoji} {title}
+                </p>
                 <p>{description}</p>
               </div>
             </li>
@@ -21,7 +25,14 @@ const FeatureCard = () => {
         </ul>
       </div>
       <div className="actions">
-        <button> Перейти за $3 на 4-недели </button>
+        <button>Перейти за $3 на 4-недели </button>
+        <button
+          onClick={() => {
+            setValue((p) => !p);
+          }}
+        >
+          Нет, спасибо
+        </button>
       </div>
     </div>
   );

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CardPost from "../a_components/CardPost";
+import ValueContext from "../context/global";
 
 const Home = () => {
   const [items, setItems] = useState([]);
   const [itemsLoadet, setItemsLoadet] = useState(1);
+  const { value, setValue } = useContext(ValueContext);
 
   useEffect(() => {
     fetch("https://dummyjson.com/users")
@@ -25,9 +27,18 @@ const Home = () => {
               setItemsLoadet((p) => p + 6);
             }}
           >
-            Загрузить еще{" "}
+            Загрузить еще
+          </button>
+          <button
+            className="btn-prev"
+            onClick={() => {
+              setValue((p) => !p);
+            }}
+          >
+            Премиум
           </button>
         </div>
+        <div className="modalWindow"></div>
       </main>
     </>
   );
