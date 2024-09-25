@@ -9,6 +9,12 @@ const Home = () => {
   const { value, setValue } = useContext(ValueContext);
 
   useEffect(() => {
+    if (!localStorage.getItem("cart")) {
+      console.log("new cart");
+      localStorage.setItem("cart", "");
+    }
+  }, []);
+  useEffect(() => {
     fetch(BASE_URL)
       .then((res) => res.json())
       .then((data) => setItems(data.users));
