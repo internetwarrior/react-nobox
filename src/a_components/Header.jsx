@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,6 +7,9 @@ const Header = () => {
       <a className="logo" href="/">
         <SVG />
       </a>
+      <Link to={"/post"}>Детально</Link>
+      <Link to={"/contact"}>контакты</Link>
+      <Link to={"/404"}>ошибка 404</Link>
     </header>
   );
 };

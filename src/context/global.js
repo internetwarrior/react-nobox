@@ -8,7 +8,7 @@ export default ValueContext;
 
 // Провайдер для контекста
 export const ValueProvider = ({ children }) => {
-  const [value, setValue] = useState(true); // Состояние для value
+  const [value, setValue] = useState(false); // Состояние для value
 
   // Эффект для каких-либо действий при изменении value (если нужно)
   useEffect(() => {

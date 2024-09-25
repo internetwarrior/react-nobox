@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import CardPost from "../a_components/CardPost";
 import ValueContext from "../context/global";
+import { BASE_URL } from "../global/settings";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -8,7 +9,7 @@ const Home = () => {
   const { value, setValue } = useContext(ValueContext);
 
   useEffect(() => {
-    fetch("https://dummyjson.com/users")
+    fetch(BASE_URL)
       .then((res) => res.json())
       .then((data) => setItems(data.users));
   }, []);
