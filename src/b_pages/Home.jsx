@@ -4,27 +4,21 @@ import ValueContext from "../context/global";
 import { BASE_URL } from "../global/settings";
 
 const Home = () => {
-  const [items, setItems] = useState([]);
-  const [itemsLoadet, setItemsLoadet] = useState(1);
-  const { value, setValue } = useContext(ValueContext);
+  const {
+    value,
+    items,
+    setValue,
+    itemsLoadet,
+    setItemsLoadet,
+    setItemLocalStorage,
+  } = useContext(ValueContext);
 
-  useEffect(() => {
-    if (!localStorage.getItem("cart")) {
-      console.log("new cart");
-      localStorage.setItem("cart", "");
-    }
-  }, []);
-  useEffect(() => {
-    fetch(BASE_URL)
-      .then((res) => res.json())
-      .then((data) => setItems(data.users));
-  }, []);
   return (
     <>
       <main>
         <div className="container">
           {items.slice(0, itemsLoadet).map((el) => (
-            <CardPost el={el} key={el.id} />
+            <CardPost id={el.id} el={el} key={el.id} />
           ))}
         </div>
         <div className="hello" style={{ width: "100%" }}>

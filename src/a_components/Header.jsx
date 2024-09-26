@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ValueContext from "../context/global";
 
 const Header = () => {
+  const { cartItems } = useContext(ValueContext);
   return (
     <header>
       <a className="logo" href="/">
-        <SVG />
+        {/* <SVG /> */}nobox
       </a>
-      <Link to={"/post"}>Детально</Link>
-      <Link to={"/contact"}>контакты</Link>
-      <Link to={"/404"}>ошибка 404</Link>
+      <div>
+        <span>✪{cartItems ? cartItems.length : 0}</span>
+      </div>
+      <nav>
+        <Link to={"/contact"}>контакты</Link>
+        <Link to={"/404"}>ошибка 404</Link>
+        <Link to={"/post"}>Детально</Link>
+      </nav>
     </header>
   );
 };
