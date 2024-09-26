@@ -25,7 +25,7 @@ const CardPost = (props, { el }) => {
             setItemLocalStorage(id);
           }}
         >
-          {cartItems.includes(id) ? "Удалить из корзины" : "Добавить в корзину"}
+          {cartItems && cartItems.includes(id) ? "Удалить из корзины" : "Добавить в корзину"}
         </button>
       </div>
     </div>
