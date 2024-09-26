@@ -8,6 +8,7 @@ import Contacts from "./b_pages/Contacts";
 import Details from "./b_pages/Details";
 import NotFound from "./b_pages/NotFound";
 import CardPost from "./a_components/CardPost";
+import Cart from "./b_pages/Cart";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const MainComponent = () => {
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/post" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
           {/* <Route path="/cardPost" element={<CardPost />} /> */}
         </Route>
         <Route path="*" element={<NotFound />} />

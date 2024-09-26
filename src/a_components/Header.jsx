@@ -10,7 +10,7 @@ const Header = () => {
         {/* <SVG /> */}nobox
       </a>
       <div>
-        <span>✪{cartItems ? cartItems.length : 0}</span>
+        <Link to={"/cart"}>✪{cartItems ? cartItems.length : 0}</Link>
       </div>
       <nav>
         <Link to={"/contact"}>контакты</Link>
