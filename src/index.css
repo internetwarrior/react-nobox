@@ -82,6 +82,8 @@ main {
   background: transparent !important;
   box-shadow: none !important;
   width: auto;
+  max-height: 124px;
+  height: 100%;
 }
 
 .card-n {
@@ -105,6 +107,8 @@ main {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  max-width: 124px;
+  max-height: 124px;
 }
 
 /* .card-d p {
