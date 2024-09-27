@@ -89,11 +89,11 @@ main {
 .card-n {
   width: 100%;
   max-width: 600px;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   display: flex;
   gap: 20px;
-  -webkit-overflow-scrolling: touch;
+  /* -webkit-overflow-scrolling: touch; */
 }
 
 .card-i {
