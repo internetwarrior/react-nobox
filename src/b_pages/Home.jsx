@@ -21,22 +21,22 @@ const Home = () => {
             <CardPost id={el.id} el={el} key={el.id} />
           ))}
         </div>
-        <div className="hello" style={{ width: "100%" }}>
+        <div className="hello " style={{ width: "100%" }}>
           <button
-            className="btn-prev"
-            onClick={() => {
-              setItemsLoadet((p) => p + 6);
-            }}
-          >
-            Загрузить еще
-          </button>
-          <button
-            className="btn-prev"
+            className="btn-prev hello2"
             onClick={() => {
               setValue((p) => !p);
             }}
           >
             Премиум
+          </button>
+          <button
+            className="btn-prev "
+            onClick={() => {
+              setItemsLoadet((p) => p + 6);
+            }}
+          >
+            Загрузить еще
           </button>
         </div>
         <div className="modalWindow"></div>

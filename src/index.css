@@ -20,6 +20,48 @@ header a {
   color: black !important;
   background-color: #fff;
 }
+
+/* =================================================details============================ */
+.details {
+  background-color: #ddd;
+  height: 100vh;
+}
+
+.cardd {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  margin: auto;
+}
+
+.cardd img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cardd p {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.cardd h2 {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.cardd div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
 /* dastan */
 /* 
 границы
@@ -65,12 +107,12 @@ main {
   border-radius: 20px;
 }
 
-.card-d img {
+/* .card-d p {
   max-width: 64px;
   max-height: 64px;
   border-radius: 100%;
   aspect-ratio: 1;
-}
+} */
 
 .card-n div {
   flex-basis: 100%;
@@ -94,9 +136,9 @@ main {
   }
 }
 
-* {
+/* * {
   outline: 1px solid limegreen;
-}
+} */
 
 /* Стиль для всех браузеров */
 ::-webkit-scrollbar {
@@ -201,10 +243,15 @@ main {
   /* flex-wrap: wrap; */
 }
 
-.hello div {
+.hello {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.hello2 {
+  background-color: purple !important;
+  color: #fff !important;
 }
 
 .btn-prev {
@@ -265,6 +312,7 @@ header {
   width: 100%;
   top: 0;
   right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .logo {

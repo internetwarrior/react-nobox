@@ -10,13 +10,13 @@ const Header = () => {
         {/* <SVG /> */}nobox
       </a>
       <div>
-        <Link to={"/cart"}>✪{cartItems ? cartItems.length : 0}</Link>
+        <Link to={"/cart"}>Корзина✪{cartItems ? cartItems.length : 0}</Link>
       </div>
-      <nav>
+      {/* <nav>
         <Link to={"/contact"}>контакты</Link>
         <Link to={"/404"}>ошибка 404</Link>
         <Link to={"/post"}>Детально</Link>
-      </nav>
+      </nav> */}
     </header>
   );
 };

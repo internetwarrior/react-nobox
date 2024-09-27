@@ -17,7 +17,12 @@ const CardPost = (props, { el }) => {
         </div>
         <div className="card-d">
           <p>hello</p>
-          <img src={BASE_IMG} alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+            dolores, corporis, eos rem vitae cum, cumque earum labore
+            accusantium inventore illo aliquid eligendi quae harum adipisci
+            fugiat quidem soluta aspernatur.
+          </p>
           <p>hello world </p>
         </div>
         <button
@@ -25,7 +30,9 @@ const CardPost = (props, { el }) => {
             setItemLocalStorage(id);
           }}
         >
-          {cartItems && cartItems.includes(id) ? "Удалить из корзины" : "Добавить в корзину"}
+          {cartItems && cartItems.includes(id)
+            ? "Удалить из корзины"
+            : "Добавить в корзину"}
         </button>
       </div>
     </div>
